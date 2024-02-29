@@ -35,7 +35,7 @@ int main(int argc, char *argv[]) {
   // Заполнение массива псевдослучайными числами
   srand(time(NULL));
   for (int i = 0; i < n; i++) {
-    arr[i] = rand() % 31; //
+    arr[i] = rand() % 31; //// Генерация случайных чисел от 0 до 30
   }
 
   printf("Исходные данные:\n");
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
   }
   printf("\n");
 
-  //
+  // Сортировка массива по количеству единиц в двоичной записи
   qsort(arr, n, sizeof(int), compareByOnes);
 
   printf("Результат:\n");
