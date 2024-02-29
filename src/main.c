@@ -11,7 +11,7 @@ int countOnes(int num) {
   return count;
 }
 
-//
+// Функция для сравнения двух чисел по количеству единиц в их двоичной записи
 int compareByOnes(const void *a, const void *b) {
   int onesA = countOnes(*(int *)a);
   int onesB = countOnes(*(int *)b);
@@ -32,7 +32,7 @@ int main(int argc, char *argv[]) {
 
   int *arr = (int *)malloc(n * sizeof(int));
 
-  //
+  // Заполнение массива псевдослучайными числами
   srand(time(NULL));
   for (int i = 0; i < n; i++) {
     arr[i] = rand() % 31; //
