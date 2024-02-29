@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// 
+// Функция для подсчета количества единиц в двоичной записи числа
 int countOnes(int num) {
   int count = 0;
   while (num > 0) {
@@ -11,7 +11,7 @@ int countOnes(int num) {
   return count;
 }
 
-// 
+//
 int compareByOnes(const void *a, const void *b) {
   int onesA = countOnes(*(int *)a);
   int onesB = countOnes(*(int *)b);
@@ -32,10 +32,10 @@ int main(int argc, char *argv[]) {
 
   int *arr = (int *)malloc(n * sizeof(int));
 
-  // 
+  //
   srand(time(NULL));
   for (int i = 0; i < n; i++) {
-    arr[i] = rand() % 31; // 
+    arr[i] = rand() % 31; //
   }
 
   printf("Исходные данные:\n");
@@ -44,7 +44,7 @@ int main(int argc, char *argv[]) {
   }
   printf("\n");
 
-  // 
+  //
   qsort(arr, n, sizeof(int), compareByOnes);
 
   printf("Результат:\n");
